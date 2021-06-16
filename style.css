@@ -31,8 +31,6 @@
 }
 
 body {
-    background-image: url('bg.jpeg');
-    /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */
-    /* background-size: cover; */
+    background: url(bg.png) no-repeat fixed;
+    background-size: cover;
 }
