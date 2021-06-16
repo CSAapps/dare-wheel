@@ -49,7 +49,13 @@ var dareClose = e('dare-close');
 var dareTitle = e('dare-title');
 var dareText = e('dare-text');
 
+var audioMusic = new Audio('sounds/music2.wav');
+var audioLaugh = new Audio('sounds/laugh2.mp3');
+
+
 function startSpin() {
+
+    audioMusic.play();
 
     wheel.stopAnimation(false);
 
@@ -61,7 +67,12 @@ function startSpin() {
     wheel.startAnimation();
 }
 
+
 function onSpinFinished(seg) {
+    audioLaugh.play();
+
+    audioMusic.pause();
+    audioMusic.currentTime = 0;
 
     var dare_indx = seg.text - 1;
     dareBox.style.backgroundColor = colors[dare_indx];

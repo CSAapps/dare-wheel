@@ -9,7 +9,7 @@ var dares = [
     "The quick brow fox jumps over the lazy dog dare 8",
     "dare 9",
     "dare 10",
-    "dare 11",
+    "The quick brow fox jumps over the lazy dog dare 11",
     "The quick brow fox jumps over the lazy dog dare 12",
     "dare 13",
     "The quick brow fox jumps over the lazy dog dare 14",
@@ -37,4 +37,4 @@ var colors = [
     "#0278AE",
     "#FA9905",
     "#FF5200",
-]
+];
