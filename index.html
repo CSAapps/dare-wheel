@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dare Wheel</title>
+    <script src="Winwheel.js"></script>
+</head>
+
+<body>
+    <script>
+        let wheel = new Winwheel({
+            'numSegments': 4,
+            'segments': [{
+                'fillStyle': '#eae56f',
+                'text': 'Prize One'
+            }, {
+                'fillStyle': '#89f26e',
+                'text': 'Prize Two'
+            }, {
+                'fillStyle': '#7de6ef',
+                'text': 'Prize Three'
+            }, {
+                'fillStyle': '#e7706f',
+                'text': 'Prize Four'
+            }],
+            'animation': {
+                'type': 'spinToStop',
+                'duration': 5,
+                'spins': 8
+            }
+        });
+    </script>
+</body>
+
+</html>
