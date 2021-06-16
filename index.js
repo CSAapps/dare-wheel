@@ -74,9 +74,7 @@ function onSpinFinished(s) {
 
     label.innerText += " | " + (wheel.rotationAngle % 360) + ":" + "";
 
-    // prompt(dares[seg.text - 1]);
-    // wheel.deleteSegment(seg_num);
-    // wheel.draw();
+
     dareBox.style.backgroundColor = colors[dare_indx];
     modal.style.display = "flex";
 }
