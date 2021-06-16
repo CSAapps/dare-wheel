@@ -14,8 +14,15 @@
 
 <body>
     <div class="center full">
-        <canvas id='canvas' width='400' height='400'></canvas>
+
+        <div id="canvasContainer">
+            <canvas id='canvas' width='350' height='350'></canvas>
+            <svg viewBox="0 0 100 100" id="pointer">
+                <polygon points="0 50, 100 100, 100 0" style="fill:lime;" />
+            </svg>
+        </div>
     </div>
+
     <span id="label">Test</span>
     <script src="index.js"></script>
 </body>

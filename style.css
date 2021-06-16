@@ -11,3 +11,28 @@
     bottom: 0;
     left: 0;
 }
+
+#canvasContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+#canvas {
+    z-index: 1;
+}
+
+#pointer {
+    position: absolute;
+    right: -20px;
+    z-index: 2;
+    height: 30px;
+    width: 30px;
+}
+
+body {
+    background-image: url('bg.jpeg');
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+}

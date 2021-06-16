@@ -5,30 +5,19 @@ var segs = [];
 
 for (var i = 0; i < dares.length; i++) {
     segs.push({
-        text = i + 1,
-        fillStyle = colors[i]
+        text: (i + 1) + "",
+        fillStyle: colors[i]
     });
 }
 
 let wheel = new Winwheel({
-    'numSegments': 4,
-    'textOrientation': 'vertical',
-    'segments': [{
-        'fillStyle': '#eae56f',
-        'text': '1'
-    }, {
-        'fillStyle': '#89f26e',
-        'text': '2'
-    }, {
-        'fillStyle': '#7de6ef',
-        'text': '3'
-    }, {
-        'fillStyle': '#e7706f',
-        'text': '4'
-    }],
+    'textAlignment': 'outer',
+    'pointerAngle': 90,
+    'numSegments': segs.length,
+    'segments': segs,
     'animation': {
         'type': 'spinToStop',
-        'duration': 2,
+        'duration': 5,
         'spins': 3,
         'callbackFinished': onSpinFinished
     },
@@ -57,8 +46,8 @@ function startSpin() {
 function onSpinFinished(seg) {
     var seg_num = wheel.getIndicatedSegmentNumber();
     label.innerText = seg_num;
-    prompt(seg.text);
-    wheel.deleteSegment(seg_num);
-    wheel.draw();
+    prompt(dares[seg.text - 1]);
+    // wheel.deleteSegment(seg_num);
+    // wheel.draw();
 }
 canvas.onclick = startSpin;
