@@ -3,7 +3,14 @@ function e(id) {
 }
 var segs = [];
 
-for (var i = 0; i < dares.length; i++) {
+// for (var i = 0; i < dares.length; i++) {
+//     segs.push({
+//         text: (i + 1) + "",
+//         fillStyle: colors[i]
+//     });
+// }
+
+for (var i = dares.length - 1; i >= 0; i--) {
     segs.push({
         text: (i + 1) + "",
         fillStyle: colors[i]
@@ -17,13 +24,14 @@ let wheel = new Winwheel({
     'textFontFamily': 'Comic Sans MS',
     'textFontSize': 30,
     'strokeStyle': '#ffffff',
+    'innerRadius': 15,
     'pointerAngle': 90,
     'numSegments': segs.length,
     'segments': segs,
     'animation': {
         'type': 'spinToStop',
-        'duration': 1,
-        'spins': 1,
+        'duration': 5,
+        'spins': 3,
         'callbackFinished': onSpinFinished
     }
     // 'pointerGuide': {
@@ -38,48 +46,41 @@ var label = e('label');
 var modal = e('myModal');
 var dareBox = e('dare-box');
 var dareClose = e('dare-close');
+var dareTitle = e('dare-title');
+var dareText = e('dare-text');
 
 function startSpin() {
-    // Stop any current animation.
+
     wheel.stopAnimation(false);
 
     // Reset the rotation angle to less than or equal to 360 so spinning again works as expected.
     // Setting to modulus (%) 360 keeps the current position.
     wheel.rotationAngle = wheel.rotationAngle % 360;
 
-    // Start animation.
+
     wheel.startAnimation();
 }
 
-function onSpinFinished(s) {
-    // label.innerText = JSON.stringify(s);
+function onSpinFinished(seg) {
 
-
-    var ra = wheel.rotationAngle % 360;
-    var sa = 0 + s.startAngle;
-    var ea = 0 + s.endAngle;
-
-    console.log(ra, ra, sa, ea);
-
-    // if (Math.abs(ra + 90 - sa) < 5 || Math.abs(ra + 90 - ea) < 5) {
-    //     alert("fwa");
-    //     wheel.rotationAngle += 10;
-    //     wheel.draw();
-    // }
-
-
-    var seg = wheel.getIndicatedSegment();
-    var seg_num = wheel.getIndicatedSegmentNumber();
     var dare_indx = seg.text - 1;
-
-    label.innerText += " | " + (wheel.rotationAngle % 360) + ":" + "";
-
-
     dareBox.style.backgroundColor = colors[dare_indx];
+    dareTitle.textContent = 'Dare #' + seg.text;
+    dareText.textContent = dares[dare_indx];
     modal.style.display = "flex";
 }
-canvas.onclick = startSpin;
 
-dareClose.onclick = function() {
+function delSeg() {
+    var seg_num = wheel.getIndicatedSegmentNumber();
+    wheel.deleteSegment(seg_num);
+    wheel.draw();
+}
+
+function closeDare() {
+    delSeg();
     modal.style.display = "none";
 }
+
+canvas.onclick = startSpin;
+
+dareClose.onclick = closeDare;

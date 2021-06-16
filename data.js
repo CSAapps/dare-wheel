@@ -1,18 +1,18 @@
 var dares = [
-    "dare 1",
-    "dare 2",
-    "dare 3",
+    "The quick brow fox jumps over the lazy dog dare 1",
+    "The quick brow fox jumps over the lazy dog dare 2",
+    "The quick brow fox jumps over the lazy dog dare 3",
     "dare 4",
-    "dare 5",
+    "The quick brow fox jumps over the lazy dog dare 5",
     "dare 6",
     "dare 7",
-    "dare 8",
+    "The quick brow fox jumps over the lazy dog dare 8",
     "dare 9",
     "dare 10",
     "dare 11",
-    "dare 12",
+    "The quick brow fox jumps over the lazy dog dare 12",
     "dare 13",
-    "dare 14",
+    "The quick brow fox jumps over the lazy dog dare 14",
     "dare 15"
 ];
 

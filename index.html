@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dare Wheel</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <script src="Winwheel.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="Winwheel.min.js"></script>
+    <script src="TweenMax.min.js"></script>
     <script src="data.js"></script>
 </head>
 
@@ -20,6 +20,7 @@
             <svg viewBox="0 0 100 100" id="pointer">
                 <polygon points="0 50, 100 100, 100 0" style="fill:white;" />
             </svg>
+            <div id="pin"></div>
         </div>
     </div>
 
@@ -30,12 +31,13 @@
         <!-- Modal content -->
         <div id="dare-box" class="modal-content">
             <span id="dare-close" class="close">&times;</span>
-            <p>Some text in the Modal..</p>
+            <div id="dare-title">Dare #1</div>
+            <div id="dare-text"> .The quick brow fox jumps over the lazy dog.The quick brow fox jumps over the lazy dog.</div>
         </div>
 
     </div>
 
-    <span id="label">Test</span>
+    <span id="label"></span>
     <script src="index.js"></script>
 </body>
 
