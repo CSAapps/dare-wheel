@@ -1,17 +1,18 @@
 let wheel = new Winwheel({
     'numSegments': 4,
+    'textOrientation': 'vertical',
     'segments': [{
         'fillStyle': '#eae56f',
-        'text': 'Prize One'
+        'text': '1'
     }, {
         'fillStyle': '#89f26e',
-        'text': 'Prize Two'
+        'text': '2'
     }, {
         'fillStyle': '#7de6ef',
-        'text': 'Prize Three'
+        'text': '3'
     }, {
         'fillStyle': '#e7706f',
-        'text': 'Prize Four'
+        'text': '4'
     }],
     'animation': {
         'type': 'spinToStop',
