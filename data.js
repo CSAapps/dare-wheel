@@ -8,7 +8,12 @@ var dares = [
     "dare 7",
     "dare 8",
     "dare 9",
-    "dare 10"
+    "dare 10",
+    "dare 11",
+    "dare 12",
+    "dare 13",
+    "dare 14",
+    "dare 15"
 ];
 
 var colors = [
@@ -24,6 +29,10 @@ var colors = [
     "#A34A28",
     "#3A0077",
     "#E85395",
+    "#A73CCB",
+    "#0278AE",
+    "#FA9905",
+    "#FF5200",
     "#A73CCB",
     "#0278AE",
     "#FA9905",

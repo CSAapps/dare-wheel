@@ -22,19 +22,22 @@ let wheel = new Winwheel({
     'segments': segs,
     'animation': {
         'type': 'spinToStop',
-        'duration': 5,
-        'spins': 3,
+        'duration': 1,
+        'spins': 1,
         'callbackFinished': onSpinFinished
-    },
-    'pointerGuide': {
-        'display': true,
-        'strokeStyle': 'red',
-        'lineWidth': 3
     }
+    // 'pointerGuide': {
+    //     'display': true,
+    //     'strokeStyle': 'red',
+    //     'lineWidth': 3
+    // }
 });
 
 var canvas = e('canvas');
 var label = e('label');
+var modal = e('myModal');
+var dareBox = e('dare-box');
+var dareClose = e('dare-close');
 
 function startSpin() {
     // Stop any current animation.
@@ -48,37 +51,37 @@ function startSpin() {
     wheel.startAnimation();
 }
 
-function onSpinFinished(seg) {
+function onSpinFinished(s) {
+    // label.innerText = JSON.stringify(s);
+
+
+    var ra = wheel.rotationAngle % 360;
+    var sa = 0 + s.startAngle;
+    var ea = 0 + s.endAngle;
+
+    console.log(ra, ra, sa, ea);
+
+    // if (Math.abs(ra + 90 - sa) < 5 || Math.abs(ra + 90 - ea) < 5) {
+    //     alert("fwa");
+    //     wheel.rotationAngle += 10;
+    //     wheel.draw();
+    // }
+
+
+    var seg = wheel.getIndicatedSegment();
     var seg_num = wheel.getIndicatedSegmentNumber();
-    label.innerText = seg_num;
-    prompt(dares[seg.text - 1]);
+    var dare_indx = seg.text - 1;
+
+    label.innerText += " | " + (wheel.rotationAngle % 360) + ":" + "";
+
+    // prompt(dares[seg.text - 1]);
     // wheel.deleteSegment(seg_num);
     // wheel.draw();
-}
-// canvas.onclick = startSpin;
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
+    dareBox.style.backgroundColor = colors[dare_indx];
     modal.style.display = "flex";
 }
+canvas.onclick = startSpin;
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+dareClose.onclick = function() {
     modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
 }
