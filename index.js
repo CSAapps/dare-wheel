@@ -42,8 +42,8 @@ let wheel = new Winwheel({
     'segments': segs,
     'animation': {
         'type': 'spinToStop',
-        'duration': 1, //5
-        'spins': 1, //3
+        'duration': 5, //5
+        'spins': 3, //3
         'callbackFinished': onSpinFinished
     }
     // 'pointerGuide': {

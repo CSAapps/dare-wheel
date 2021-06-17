@@ -11,8 +11,8 @@ var dares = [
     "What is your biggest celebrity crush and explain why you like him or her.",
     "What is the biggest lie you told to parents?",
     "What are the 3 qualities that you look for in your bf or gf and 3 qualities that you don’t want him or her to have",
-    "Arrange the following names from your most favourite to least favourite? (Lathika, Chirantha, CSA/Chamod, Nima, Hiruni)",
-    "Market the given product to our department? Invisible Underwear.",
+    "Arrange the following names from your most favourite to least favourite? (Lathika, Chirantha, Nima, Hiruni)",
+    "Market the given product to our department? Transparent short.",
     "Market the given product to our department? Square shaped wheel."
 ]
 
