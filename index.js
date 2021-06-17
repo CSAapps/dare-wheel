@@ -1,6 +1,10 @@
 function e(id) {
     return document.getElementById(id);
 }
+
+if (!localStorage.rem)
+    localStorage.rem = ".";
+
 var segs = [];
 
 // for (var i = 0; i < dares.length; i++) {
@@ -11,10 +15,18 @@ var segs = [];
 // }
 
 for (var i = dares.length - 1; i >= 0; i--) {
+
+    if (localStorage.rem.includes('.' + i + '.')) continue;
+
     segs.push({
         text: (i + 1) + "",
         fillStyle: colors[i]
     });
+}
+
+if (segs.length == 0) {
+    localStorage.rem = ".";
+    location.reload();
 }
 
 let wheel = new Winwheel({
@@ -30,8 +42,8 @@ let wheel = new Winwheel({
     'segments': segs,
     'animation': {
         'type': 'spinToStop',
-        'duration': 5,
-        'spins': 3,
+        'duration': 5, //5
+        'spins': 3, //3
         'callbackFinished': onSpinFinished
     }
     // 'pointerGuide': {
@@ -79,6 +91,8 @@ function onSpinFinished(seg) {
     dareTitle.textContent = 'Dare #' + seg.text;
     dareText.textContent = dares[dare_indx];
     modal.style.display = "flex";
+
+    localStorage.rem += dare_indx + '.';
 }
 
 function delSeg() {
@@ -95,3 +109,12 @@ function closeDare() {
 canvas.onclick = startSpin;
 
 dareClose.onclick = closeDare;
+
+modal.onclick = (e) => {
+    if (e.currentTarget == e.target)
+        dareBox.style.opacity = 0.8;
+}
+
+dareBox.onclick = () => {
+    dareBox.style.opacity = 1;
+}
