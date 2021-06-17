@@ -42,8 +42,8 @@ let wheel = new Winwheel({
     'segments': segs,
     'animation': {
         'type': 'spinToStop',
-        'duration': 5, //5
-        'spins': 3, //3
+        'duration': 1, //5
+        'spins': 1, //3
         'callbackFinished': onSpinFinished
     }
     // 'pointerGuide': {
@@ -88,7 +88,7 @@ function onSpinFinished(seg) {
 
     var dare_indx = seg.text - 1;
     dareBox.style.backgroundColor = colors[dare_indx];
-    dareTitle.textContent = 'Dare #' + seg.text;
+    dareTitle.textContent = '#' + seg.text;
     dareText.textContent = dares[dare_indx];
     modal.style.display = "flex";
 
