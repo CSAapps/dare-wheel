@@ -14,7 +14,7 @@ var dares = [
     "Describe a song using only lips and facial expressions until others get the song",
     "Draw a word using only your Nose until others say it correctly",
     "Show us how would you say “Malli ubata aathlda” in 3 different accents"
-]
+];
 
 
 var colors = [
@@ -33,4 +33,4 @@ var colors = [
     "#FF5200",
     "#009765",
     "#d1538c",
-]
+];
