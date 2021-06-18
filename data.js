@@ -1,19 +1,19 @@
 var dares = [
-    "Talk about yourself by replacing “your name” and “me” with “Sheela”",
-    "Ask Out your favourite girl or boy from our department?",
-    "Show how you would kiss your significant other?",
-    "Appreciate your gf or bf (imagine you have one if you don’t 🙂) referring to her as “Kossa”",
+    "Talk about yourself by replacing “your name” and “I” with “Sheela”",
+    "Propose your favourite girl or boy from our department? (or the one we point out)",
+    "Appreciate your gf/bf (imagine you have one if you don’t 🙂) referring to her/he as “Puusa”/“Kukula”",
     "Act out what you would tell your gf/bf if you get caught cheating with someone else?",
-    "Pick a song and slap your chest to its beat until someone guesses it.",
-    "Who is your secret crush?. Why do you like him or her?",
-    "Last person you stalked on Facebook or Insta? Why did you stalk him or her?",
-    "What is the weirdest place you have ever gone to the bathroom. Explain why you had to do it?",
-    "What is your biggest celebrity crush and explain why you like him or her.",
+    "What is your biggest celebrity crush and explain why you like him or her",
     "What is the biggest lie you told to parents?",
-    "What are the 3 qualities that you look for in your bf or gf and 3 qualities that you don’t want him or her to have",
-    "Arrange the following names from your most favourite to least favourite? (Lathika, Chirantha, Nima, Hiruni)",
-    "Market the given product to our department? Transparent short.",
-    "Market the given product to our department? Square shaped wheel."
+    "Name 3 qualities that you expect from your bf/gf and 3 qualities that you don’t want him or her to have?",
+    "Market a “Transparent short” to our department",
+    "Market a “Square shaped wheel” to our department",
+    "Market a “Durian Perfume” to our department",
+    "Market a “Virtual Fan App” to our department",
+    "Show us how you get permission from mom for a 2 day trip (Nima is your mom)",
+    "Describe a song using only lips and facial expressions until others get the song",
+    "Draw a word using only your Nose until others say it correctly",
+    "Show us how would you say “Malli ubata aathlda” in 3 different accents"
 ]
 
 

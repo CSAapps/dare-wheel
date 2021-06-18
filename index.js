@@ -112,7 +112,8 @@ dareClose.onclick = closeDare;
 
 modal.onclick = (e) => {
     if (e.currentTarget == e.target)
-        dareBox.style.opacity = 0.8;
+        modal.style.display = "none";
+    // dareBox.style.opacity = 0.8;
 }
 
 dareBox.onclick = () => {
