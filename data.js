@@ -9,7 +9,7 @@ var dares = [
     "Market a “Transparent short” to our department",
     "Market a “Square shaped wheel” to our department",
     "Market a “Durian Perfume” to our department",
-    "Market a “Virtual Fan App” to our department",
+    "Sing a song with a melody of another song",
     "Show us how you get permission from mom for a 2 day trip (Nima is your mom)",
     "Describe a song using only lips and facial expressions until others get the song",
     "Draw a word using only your Nose until others say it correctly",
