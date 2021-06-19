@@ -89,7 +89,8 @@ function onSpinFinished(seg) {
     var dare_indx = seg.text - 1;
     dareBox.style.backgroundColor = colors[dare_indx];
     dareTitle.textContent = '#' + seg.text;
-    dareText.textContent = dares[dare_indx];
+    // dareText.textContent = dares[dare_indx];
+    dareText.textContent = 'This is the dare No.' + seg.text;
     modal.style.display = "flex";
 
     localStorage.rem += dare_indx + '.';
